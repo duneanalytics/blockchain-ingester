@@ -27,7 +27,7 @@ Build the binary for your OS:
 ```bash
 $ make build
 
-$ BLOCKCHAIN_NAME='foo' RPC_NODE_URL='http://localhost:8545' DUNE_API_KEY='your-key-here' ./indexer
+$ BLOCKCHAIN_NAME='foo' RPC_NODE_URL='http://localhost:8545' DUNE_API_KEY='your-key-here' LOG_LEVEL=debug ./indexer
 ```
 
 Or run it directly with `go run`:
@@ -42,6 +42,9 @@ docker run duneanalytics/node-indexer --help
 ```
 
 Also, we mention some of the options here:
+
+### Log level
+Use `LOG_LEVEL=debug` (`--log-level`) to emit more logs than the default `info` level.
 
 ### Tuning RPC concurrency
 The flag `--rpc-concurrency` (environment variable `RPC_CONCURRENCY`) specifies the number of threads (goroutines)
